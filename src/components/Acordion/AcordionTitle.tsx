@@ -1,10 +1,10 @@
 import React from "react";
 
-export type ptopsTitle={
+export type propsTitle={
     title:string
 }
 
-export const AcordionTitle = (props:ptopsTitle) => {
+export const AcordionTitle = (props:propsTitle) => {
     return (
         <div>{props.title}</div>
     )

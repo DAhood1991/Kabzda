@@ -6,10 +6,10 @@ import {Rating} from "./components/Rating/Rating";
 function App() {
     return (
         <div className="App">
-            <Accordion title={"THIS my page"}/>
+            <Accordion titleValue={"THIS my page"} collapsed={true}/>
             <Rating value ={4}/>
-            <Accordion title={"THIS my new page"}/>
-            <Rating value ={6}/>
+            <Accordion titleValue={"THIS my new page"} collapsed={false}/>
+            <Rating value ={2}/>
         </div>
     );
 }
