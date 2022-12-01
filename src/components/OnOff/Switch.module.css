@@ -1,0 +1,18 @@
+.on{
+    color: wheat;
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.off{
+    color: wheat;
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}

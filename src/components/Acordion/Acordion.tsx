@@ -1,18 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import {AcordionTitle} from "./AcordionTitle";
 import {AcordionBody} from "./AcordionBody";
 
 
 export type propsTitleValue={
     titleValue:string
-    collapsed:boolean
 }
 export const Accordion = (props:propsTitleValue) => {
-        if(props.collapsed !== true){
-            return  <div>
-                <AcordionTitle title={props.titleValue}/>
-                <AcordionBody/>
-            </div>
-        } return <div> <AcordionTitle title={props.titleValue}/></div>
+    const [collapsed,setcollapsed] =useState<boolean>()
 
+            return  <div>  <AcordionTitle title={props.titleValue}/>
+                <button onClick={()=>{setcollapsed(!collapsed)}}> +</button>
+                {!collapsed && <AcordionBody/> }</div>
 }
