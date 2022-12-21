@@ -7,9 +7,12 @@ export type propsTitleValue={
     titleValue:string
 }
 export const Accordion = (props:propsTitleValue) => {
-    const [collapsed,setcollapsed] =useState<boolean>()
+    const [collapsed,setcollapsed] =useState<boolean>(true)
+    const onClickCollapsed = () => {
+      setcollapsed(!collapsed)
+    }
 
-            return  <div>  <AcordionTitle title={props.titleValue}/>
-                <button onClick={()=>{setcollapsed(!collapsed)}}> +</button>
+            return  <div>  <AcordionTitle onClickCollapsed={onClickCollapsed} title={props.titleValue}/>
+                {/*<button onClick={onClickCollapsed}>collapsed</button>*/}
                 {!collapsed && <AcordionBody/> }</div>
 }

@@ -2,10 +2,11 @@ import React from "react";
 
 export type propsTitle={
     title:string
+    onClickCollapsed:()=>void
 }
 
 export const AcordionTitle = (props:propsTitle) => {
     return (
-        <div>{props.title}</div>
+        <div onClick={props.onClickCollapsed}>{props.title}</div>
     )
 }
